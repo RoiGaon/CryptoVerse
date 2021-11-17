@@ -1,10 +1,9 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import env from "react-dotenv";
 
-const baseUrl = env.CRYPTO_BASE_URL;
+const baseUrl = process.env.React_App_CRYPTO_BASE_URL;
 const cryptoApiHeaders = {
-  "x-rapidapi-host": env.X_CRYPTO_RAPIDAPI_HOST,
-  "x-rapidapi-key": env.X_CRYPTO_RAPIDAPI_KEY,
+  "x-rapidapi-host": process.env.React_App_X_CRYPTO_RAPIDAPI_HOST,
+  "x-rapidapi-key": process.env.React_App_X_CRYPTO_RAPIDAPI_KEY,
 };
 
 const createRequest = (url) => ({
